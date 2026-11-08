@@ -22,7 +22,7 @@
       entries.forEach(function (e) {
         if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
       });
-    }, { threshold: 0.18 });
+    }, { threshold: 0.12, rootMargin: '0px 0px 40px 0px' });
     document.querySelectorAll('.sec-head, .photo-row figure, .ticket, .services-note, blockquote, .visit > div').forEach(function (el) {
       el.classList.add('reveal');
       io.observe(el);
